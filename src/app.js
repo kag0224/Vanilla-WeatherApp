@@ -43,7 +43,19 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "748e575d7c9421f3b821d29a87e2a544";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Sacramento&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "748e575d7c9421f3b821d29a87e2a544";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchCityElement = document.querySelector("#search-city");
+  search(searchCityElement.value);
+}
+
+search("San Francisco");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
