@@ -21,21 +21,31 @@
           <form id="search-form" class="mb-3">
             <div class="row">
               <div class="col-8">
-            <input type="search" placeholder="Search city" class="form-control" id="search-city" autocomplete="off" />
+                <input
+                  type="search"
+                  placeholder="Search city"
+                  class="form-control"
+                  id="search-city"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-4">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-light w-100"
+                />
+              </div>
             </div>
-            <div class="col-4">
-            <input type="submit" value="Search" class="btn btn-light w-100" />
-            </div>
-            </div>
-            </form>
+          </form>
           <h1 id="city"></h1>
           <div class="row">
             <div class="col-6">
               <ul>
                 <li id="date"></li>
                 <li id="description"></li>
-                <li>Humidity: <span id=humidity></span>%</li>
-                <li>Wind: <span id=wind></span> km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
             <div class="col-6">
@@ -43,24 +53,35 @@
                 <div class="float-right">
                   <img src="" alt="cloudy" id="icon" />
                   <strong id="temperature"></strong>
-                  <span class="units"> 
-                    <a href="#" id="celsius-link" class="active">°C </a> |
-                    <a href="#" id="fahrenheit-link">°F </a>
+                  <span class="units">
+                    <a href="#" id="fahrenheit-link" class="active">°F </a> |
+                    <a href="#" id="celsius-link">°C </a>
                   </span>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-         <small>
+          <div class="weather-forecast">
+            <div class="row">
+              <div class="col-3">
+                <div class="weather-forecast-date">Fri</div>
+                ☀️
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max"> 60° </span>
+                  <span class="weather-forecast-temperature-min"> 46° </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <small>
           <a href="https://github.com/kag0224/Vanilla-WeatherApp">
             Open-source code
           </a>
           by Kristy-Ann Gaor
         </small>
-        </div>
       </div>
-      <script src="src/app.js"></script>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
