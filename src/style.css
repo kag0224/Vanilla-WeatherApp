@@ -32,7 +32,7 @@ li:first-letter {
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 650px;
   margin: 30px auto;
 }
 
@@ -40,6 +40,12 @@ li:first-letter {
   padding: 20px;
   border: 1px solid #d1d1d1;
   border-radius: 10px;
+  background: linear-gradient(
+    109.6deg,
+    rgb(232, 252, 252) 11.2%,
+    rgb(252, 215, 134) 56.2%,
+    rgb(247, 124, 124) 100.2%
+  );
 }
 
 .weather-temperature img {
